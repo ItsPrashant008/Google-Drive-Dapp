@@ -11,8 +11,8 @@ const config: HardhatUserConfig = {
       optimizer: {
         enabled: true,
         runs: 1000,
-      }
-    }
+      },
+    },
   },
 
   networks: {
@@ -23,7 +23,7 @@ const config: HardhatUserConfig = {
     },
 
     hardhat: {
-      chainId: 31337
+      chainId: 31337,
     },
 
     polygon_mumbai: {
@@ -35,18 +35,16 @@ const config: HardhatUserConfig = {
       url: process.env.ALCHEMY_POLYGON_API_KEY_MAINNET,
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    }
+    },
   },
 
-  paths:{
-    artifacts: "../client/src/artifacts"
+  paths: {
+    artifacts: "../ReactFrontEnd/src/artifacts",
   },
 
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
-
-
 };
 
 export default config;
