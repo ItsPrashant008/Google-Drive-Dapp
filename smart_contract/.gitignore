@@ -9,5 +9,4 @@ typechain-types
 cache
 artifacts
 
-smart_contract
-
+package-lock.json
